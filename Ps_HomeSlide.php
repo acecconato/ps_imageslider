@@ -67,6 +67,9 @@ class Ps_HomeSlide extends ObjectModel
         $res = true;
 
         $images = $this->image;
+        $pathinfo = pathinfo(array_shift($this->image));
+        $images[] = $pathinfo['filename'] . '_default_xl.' . $pathinfo['extension'];
+
         foreach ($images as $image) {
             if (preg_match('/sample/', $image) === 0) {
                 if ($image && file_exists(__DIR__ . '/images/' . $image)) {

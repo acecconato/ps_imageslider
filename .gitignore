@@ -2,3 +2,8 @@
 /translations/*.php
 /vendor/
 /.php_cs.cache
+
+images/*
+!images/filetype
+!images/samples-*
+!images/index.php
